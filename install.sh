@@ -2,6 +2,7 @@
 apt-get install git
 apt-get install libpcsclite1 libpcsclite-dev
 apt-get install pcscd
+apt-get install build-essential
 npm install -g node-gyp
 
 
