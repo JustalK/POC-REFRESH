@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "install": "npm install --prefix POC-NFC-master",
-    "start": "npm run dev --prefix POC-NFC-master",
-    "refresh": "node refresh.js"
+    "sub-install": "npm install --prefix POC-NFC-master",
+    "sub-start": "npm run dev --prefix POC-NFC-master",
+    "start": "node refresh.js"
   },
   "dependencies": {
     "decompress": "^4.2.1"
