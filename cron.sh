@@ -2,7 +2,6 @@
 
 cd /home/admin/code/POC-REFRESH/
 npm run start
-npm run sub-install
 
 pm2 describe NFC > /dev/null
 RUNNING=$?

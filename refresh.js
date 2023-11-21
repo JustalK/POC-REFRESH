@@ -7,6 +7,13 @@ const PROJECT_NAME = "POC-NFC";
 /**
  * Download the zip file from the url
  */
+const install = function () {
+  cp.execSync(`npm run sub-install`);
+};
+
+/**
+ * Download the zip file from the url
+ */
 const download = function () {
   cp.execSync(
     `curl -L -O https://github.com/JustalK/${PROJECT_NAME}/archive/refs/heads/master.zip`
@@ -50,6 +57,7 @@ async function update() {
     download();
     await decompress("master.zip", ".");
     fs.unlinkSync("master.zip");
+    install();
   }
 }
 
