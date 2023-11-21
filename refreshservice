@@ -1,0 +1,11 @@
+[Unit]
+Description=My Shell Script
+
+[Service]
+User=admin
+Group=admin
+WorkingDirectory=/home/admin/code/POC-REFRESH
+ExecStart=/home/admin/code/POC-REFRESH/cron.sh
+Environment=PATH=/home/admin/.pyenv/shims:/home/admin/.pyenv/bin:/home/admin/.nvm/versions/node/v14.21.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/usr/b>
+[Install]
+WantedBy=multi-user.target
