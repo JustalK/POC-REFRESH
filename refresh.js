@@ -5,7 +5,14 @@ const decompress = require("decompress");
 const PROJECT_NAME = "POC-NFC";
 
 /**
- * Download the zip file from the url
+ * Run PM2
+ */
+const pm2 = function () {
+  cp.execSync(`bash ./pm2.sh`);
+};
+
+/**
+ * Install the sub folder
  */
 const install = function () {
   cp.execSync(`npm run sub-install`);
@@ -58,6 +65,7 @@ async function update() {
     await decompress("master.zip", ".");
     fs.unlinkSync("master.zip");
     install();
+    pm2();
   }
 }
 
