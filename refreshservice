@@ -1,5 +1,5 @@
 [Unit]
-Description=My Shell Script
+Description=PocNFC
 
 [Service]
 User=admin
