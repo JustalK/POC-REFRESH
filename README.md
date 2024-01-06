@@ -4,7 +4,7 @@
 
 This project is a bit unique, the goal is to update an application on a specific operating system. The update is required both at the initiation of the system and upon command. The complexity arises from the fact that code push can be initiated from various projects at any given time. The problem is, I could not employ a straightforward 'git pull' with a cron job, but I had to orchestrate the download of the project and executing it through pm2. The reason is the code and commit can be done by someone else directly on the machine with no information for me to know about it.
 
-In this project, I use *Node.js* in order to run my project as module. Employing pm2, I ensure seamless background execution, while services are utilized to establish a task within the systemctl framework.
+In this project, I use _Node.js_ in order to run my project as module. Employing pm2, I ensure seamless background execution, while services are utilized to establish a task within the systemctl framework.
 
 ![Last version](https://img.shields.io/github/v/tag/justalk/poc-nfc.svg?style=flat-square)
 
@@ -19,6 +19,33 @@ I explain with all the details how I build the project and my way of working.
 - [Commands](#commands)
 - [Running](#running)
 - [System](#system)
+
+## Installation
+
+#### Service
+
+Create the service in `/etc/systemd/system/refreshservice.service` and activate it with:
+
+```bash
+$ sudo systemctl start refreshservice.service
+$ sudo systemctl status refreshservice.service
+```
+
+#### Permissions
+
+Change `cron.sh` permission with:
+
+```bash
+$ chmod 777 cron.sh
+```
+
+#### Npm
+
+Install Npm globally with:
+
+```bash
+$ sudo apt install npm -y
+```
 
 ## Flowchart
 
